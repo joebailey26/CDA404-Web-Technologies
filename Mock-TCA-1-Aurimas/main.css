@@ -1,0 +1,48 @@
+h1, h2 {
+    text-align: center;
+}
+
+* {
+    font-family: Arial;
+}
+
+#header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header > ul {
+    list-style-type: none;
+}
+
+#header > ul > li {
+    display: inline-block;
+}
+
+#wrapper {
+    width: 920px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main_about_me {
+    float: left;
+    width: 440px;
+}
+
+#main_background {
+    float: right;
+    width: 440px;
+}
+
+#language_table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#footer {
+    text-align: center;
+}

@@ -1,0 +1,67 @@
+h1, h2, h3, h4, h5, h6, header, footer, li {
+    text-align: center;
+}
+body {
+    font-family: Arial;
+    background-color: #fefefe;
+    padding: 0;
+    margin: 0;
+}
+#wrapper {
+    width: 80%;
+    margin: auto;
+    background-color: #eeeeee;
+}
+header ul {
+    padding: 0;
+}
+header ul li {
+    display: inline-block;
+}
+.section  {
+    float: left;
+    width: 45%;
+    margin: 2.4%;
+}
+.contact {
+    margin: auto;
+    clear: left;
+    width: 45%;
+    margin-bottom: 50px;
+}
+input, textarea {
+    float: right;
+    padding: 2px;
+    border-width: 1px;
+    width: 180px;
+}
+textarea {
+    resize: none;
+}
+input[type=submit] {
+    background-color: blue;
+    font-size: 16px;
+    color: white;
+    float: none;
+    width: auto;
+    margin-left: 60%;
+}
+footer {
+    clear: left;
+}
+
+@media (max-width:400px) {
+    .section {
+        width: 90%;
+        float: inherit;
+    }
+    .contact {
+        width: 90%;
+    }
+    input, textarea {
+        width: 60%;
+    }
+    input[type=submit] {
+        margin: auto;
+    }
+}

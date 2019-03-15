@@ -1,0 +1,32 @@
+body {
+    font-family: arial;
+    padding: 0;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, header, footer {
+    text-align: center;
+}
+#wrapper {
+    max-width: 920px;
+    margin: auto;
+}
+ul {
+    padding: 0;
+}
+ul li {
+    display: inline-block;
+    text-align: center;
+}
+#about_me, #background {
+    float: left;
+    width: 49.5%;
+}
+table {
+    margin: auto;
+}
+tr td:first-child {
+    font-weight: bold;
+}
+tr:nth-child(odd) {
+  background: red;
+}
