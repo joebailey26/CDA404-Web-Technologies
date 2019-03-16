@@ -2,18 +2,26 @@ function main() {
     var form = document.getElementById("productForm"); 
     form.addEventListener("click", formChanged);
     
-    var count = document.getElementsByClassName("product")
-    for (var i = 0; count[i]; i++) {
-        count[i].addEventListener("click", addToCart);
+    var check = document.getElementsByClassName("check");
+    for (var i = 0; check[i]; i++) {
+        check[i].addEventListener("click", addToCart);
     };
     function addToCart() {
-        console.log(this);
-        var qty = this.getElementsByClassName("quantity")[0];
-        var check = this.getElementsByClassName("check")[0];
-        if (check.checked == true && qty.value <= 0 || qty.value >= 100) {
+        var product = this.parentNode.parentNode;
+        var qty = product.getElementsByClassName("quantity")[0];
+        
+        if (this.checked == true && qty.value <= 0 || qty.value >= 100) {
             qty.style.backgroundColor = "red";
         } else {
             qty.style.backgroundColor = "";
+        };
+        
+        var desc = this.dataset.desc;
+        
+        if (this.checked == true && qty.value > 0 && qty.value < 100 && document.getElementById("order-summary").innerHTML.includes(desc) == false) {
+            document.getElementById("order-summary").innerHTML += desc + "<br>";
+        } else {
+            document.getElementById("order-summary").innerHTML = document.getElementById("order-summary").innerHTML.replace(desc + "<br>", " ");
         };
     };
 };
