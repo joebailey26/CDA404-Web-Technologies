@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conspiracy?</title>
+    <meta name="description" content="Joe Bailey is a web developer and photographer currently living in Southampton studying at Solent University.">
+
+    <link href="assets/css/main.css" rel="preload" as="style">
+    <link href="assets/css/main.css" rel="stylesheet">
+		
+    <meta property="og:image" content="android-chrome-384x384.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#004c3f">
+    <meta name="msapplication-TileColor" content="#004c3f">
+    <meta name="theme-color" content="#282828">
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcLDYgUAAAAAIXDeTU8jn_FTTetybUTIscj8DZX"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LcLDYgUAAAAAIXDeTU8jn_FTTetybUTIscj8DZX', { action: 'contact' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+            });
+        });
+    </script>
+        
+</head>
+<body>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+    <div id="main_content">
+
+    </div>
+    <footer>
+        &copy; <span id="year" onload="date()">2018</span> Website by <a href="https://joebailey.xyz">Joe Bailey</a>
+    </footer>
+    <script async href="assets/javascript/main.js"></script>
+</body>
+</html>
