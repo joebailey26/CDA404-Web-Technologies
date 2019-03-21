@@ -1,1 +1,239 @@
-﻿@font-face{font-display:swap;font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:400;src:url(../webfonts/fa-brands-400.eot) format("embedded-opentype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.svg) format("svg")}@font-face{font-display:swap;font-family:'Font Awesome 5 Free';font-style:normal;font-weight:900;src:url(../webfonts/fa-solid-900.eot) format("embedded-opentype"),url(../webfonts/fa-solid-900.woff2) format("woff2"),url(../webfonts/fa-solid-900.woff) format("woff"),url(../webfonts/fa-solid-900.ttf) format("truetype"),url(../webfonts/fa-solid-900.svg) format("svg")}.fas{display:inline-block;font-family:'Font Awesome 5 Free';font-weight:900}.fa-bars:before{content:""}i.fas.fa-bars{font-size:x-large}#article-one, #article-two, #article-three, #article-four{display:none}
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto:500");
+html,
+body,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+:link, :visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  src: url(../webfonts/fa-solid-900.eot) format("embedded-opentype"), url(../webfonts/fa-solid-900.woff2) format("woff2"), url(../webfonts/fa-solid-900.woff) format("woff"), url(../webfonts/fa-solid-900.ttf) format("truetype"), url(../webfonts/fa-solid-900.svg) format("svg");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v42/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
+}
+.nav-icon {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
+}
+
+.nav-icon:before {
+  content: "";
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: 400;
+  font-size: 24px;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+}
+
+#four-o-four h1 {
+  text-align: center;
+  margin: 25px 0;
+}
+#four-o-four p {
+  margin-bottom: 25px;
+}
+#four-o-four .button-one {
+  text-align: center;
+}
+
+#index #main-content {
+  max-width: 438px;
+}
+#index h1 {
+  text-align: center;
+  margin: 25px 0;
+  width: 100%;
+}
+#index p {
+  margin-bottom: 25px;
+}
+#index .button-one {
+  text-align: center;
+  width: 100%;
+}
+
+#news #nine-eleven, #news #mkultra, #news #cancer, #news #lincoln-and-kennedy {
+  display: none;
+}
+#news h2 {
+  margin-bottom: 25px;
+}
+#news p {
+  margin-bottom: 25px;
+}
+#news .read-more {
+  margin-bottom: 50px;
+  font-size: 22px;
+  display: block;
+}
+
+#article h1 {
+  margin-bottom: 25px;
+}
+#article p {
+  margin-bottom: 22px;
+}
+#article img {
+  margin: 0 22px;
+}
+#article .author, #article .date {
+  font-size: 18px;
+  color: white;
+}
+#article li {
+  font-size: 22px;
+  margin-bottom: 11px;
+}
+#article ul {
+  margin-left: 22px;
+}
+#article #nine-eleven {
+  float: right;
+  margin-right: 0px;
+  float: right;
+}
+#article #MKUltra {
+  width: 100%;
+  margin: 0 0 22px 0;
+}
+#article #cancer {
+  width: 320px;
+  float: left;
+  margin-left: 0px;
+  float: left;
+}
+#article #lincoln {
+  width: 300px;
+  float: right;
+  margin-right: 0px;
+  float: right;
+}
+
+h1 {
+  font-size: 30px;
+  display: inline-block;
+}
+
+h2 {
+  font-size: 30px;
+  display: inline-block;
+}
+
+p {
+  font-size: 22px;
+  text-align: justify;
+}
+
+body {
+  background-color: #373737;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: white;
+}
+
+header {
+  height: 56px;
+  width: 100%;
+  background-color: #616161;
+}
+
+nav {
+  padding: 16px 0;
+}
+
+app-drawer {
+  display: none;
+}
+
+#active {
+  color: #76FF03;
+}
+
+.nav-icon {
+  font-size: 23px;
+  width: 24px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+#title {
+  font-size: 20px;
+  vertical-align: top;
+}
+
+#main-content {
+  min-height: calc(100vh - 191px);
+  max-width: 980px;
+  margin: 50px auto;
+}
+
+footer {
+  width: 100%;
+  height: 35px;
+}
+
+footer p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 0px !important;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+}
+
+.button-one a {
+  font-size: 20px;
+  padding: 11px 13.5px;
+  background-color: #76FF03;
+  color: black;
+  text-transform: uppercase;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.button-one a:active {
+  background-color: #32cb00;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.237602), 0px 0px 8px rgba(0, 0, 0, 0.12);
+}
+
+/*# sourceMappingURL=main.css.map */

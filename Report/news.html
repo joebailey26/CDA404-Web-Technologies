@@ -33,65 +33,77 @@
 		</script>
 			
 	</head>
-<body>
-    <header>
-        <nav>
-			<a class="navbar-brand" id="top" href="javascript:void(0)">Conspiracy? News</a>
-			<a title="navigation" class="navbar-toggler" href="javascript:void(0);" onclick="myFunction()">
-				<i class="fas fa-bars"></i>
+<body id="news">
+	<header>
+		<nav>
+			<a title="navigation" id="navbar-toggler" href="javascript:void(0);" onclick="myFunction()">
+				<i class="nav-icon"></i>
 			</a>
-        </nav>
-    </header>
+			<app-drawer>
+				<a href="index.html">
+					<i class="material-icons" id="active">home</i>
+					Home
+				</a>
+				<a href="news.html">
+					<i class="material-icons">library_books</i>
+					News
+				</a>
+				<a href="contact.html">
+					<i class="material-icons">chat</i>
+					Contact
+				</a>
+			</app-drawer>
+			<a id="title">News - Conspiracy?</a>
+		</nav>
+	</header>
     <div id="main-content">
 		<article id="important">
-			<a href="/article-one.html"><title>It was an inside job - 9/11</title></a>
+			<a href="/nine-eleven.html"><h2>It was an Inside Job</h2></a>
 			<p>
 				By far the most widespread tale espoused by 9/11 conspiracy theorists - often referred to as “truthers” - is that the United States government either helped the attackers succeed, or orchestrated the entire thing themselves.
 			</p>
-			<p class="read-more" id="article-one">
+			<p id="nine-eleven">
 				“Experts say part of the reason for the persistence of such conspiracy theories is the dissonance that results when people hear that a relatively small group of men using low-tech weapons caused such cataclysmic carnage,” says the BBC.
 			</p>
-			<a href="javascript:void(0);" onclick="ReadMore('article-one')">Read More</a>
+			<a class="read-more" href="javascript:void(0);" onclick="ReadMore('nine-eleven')">Read More</a>
 		</article>
 		
 		<article>
-			<a href="/article-two.html"><title>Project MKUltra</title></a>
+			<a href="/mkultra.html"><h2>Project MKUltra</h2></a>
 			<p>
 				Project MKUltra was the code name for a series of investigations into mind-bending substances, techniques, and medical procedures. The goal was to develop truth serums, mind-control drugs, and determine what chemicals and methods had potential use for torture, disorientation, and espionage. 
 			</p>
-			<p class="read-more" id="article-two">
+			<p id="mkultra">
 				The experiments started in 1953 and were slowly reduced in scope over the next 20 years before being halted in 1973. A variety of experiments were undertaken to understand the effects of powerful drugs on unsuspecting subjects.
 			</p>
-			<a href="javascript:void(0);" onclick="ReadMore('article-two')">Read More</a>
+			<a class="read-more" href="javascript:void(0);" onclick="ReadMore('mkultra')">Read More</a>
 		</article>
 		
 		<article>
-			<a href="/article-three.html"><title>FDA is Withholding the Cure for Cancer</title></a>
+			<a href="/cancer.html"><h2>FDA is Withholding the Cure for Cancer</h2></a>
 			<p>
-				Seventeen years ago today four planes were hijacked by Islamic extremists in the United States. What happened to the passengers of United Airlines flight 93 on 9/11? One aircraft was deliberately crashed into the Pentagon near Washington DC, while two were flown into the World Trade Center in New York City.
+					You've probably heard this conspiracy theory before, maybe from your uncle who still has his doubts about the Apollo 11 moon landing, or on a Reddit thread exposing the evils of "Big Pharma."
 			</p>
-			<p class="read-more" id="article-three">
-				A fourth plane came down in Pennsylvania after passengers attempted to wrestle back control from the terrorists. The crashes, combined with the subsequent collapse of the two main towers of the World Trade Center, killed 2,996 people, making it the deadliest terrorist attack in recorded history.
+			<p id="cancer">
+					It goes like this: A cure for cancer exists, but pharmaceutical companies — and perhaps even government health agencies and cancer charities — are suppressing it because they make so much money from treating the disease or fundraising for it.
 			</p>
-			<a href="javascript:void(0);" onclick="ReadMore('article-three')">Read More</a>
+			<a class="read-more" href="javascript:void(0);" onclick="ReadMore('cancer')">Read More</a>
 		</article>
 		
 		<article>
-			<a href="/article-four.html"><title>Lincoln and Kennedy Coincidences</title></a>
+			<a href="/lincoln-and-kennedy.html"><h2>Lincoln and Kennedy Coincidences</h2></a>
 			<p>
 				Not long after the assassination of President John F. Kennedy in 1963, the a list of seemingly amazing coincidences between the two men’s lives appeared, and it has been widely and continuously reprinted and circulated ever since:
 			</p>
-			<p class="read-more" id="article-four">
+			<p id="lincoln-and-kennedy">
 				Abraham Lincoln was elected to Congress in 1846. John F. Kennedy was elected to Congress in 1946. Abraham Lincoln was elected President in 1860. John F. Kennedy was elected President in 1960.
 			</p>
-			<a href="javascript:void(0);" onclick="ReadMore('article-four')">Read More</a>
+			<a class="read-more" href="javascript:void(0);" onclick="ReadMore('lincoln-and-kennedy')">Read More</a>
 		</article>
     </div>
     <footer>
-        <p>&copy; <span id="year">2018</span> Website by <a href="https://joebailey.xyz">Joe Bailey</a></p>
-        <p><a href="Documentation/.vuepress/dist">Documentation</a></p>
-    </footer>
-    <script async src="assets/js/main.js"></script>
+		<p>&copy; <span id="year">2018</span> | Website by <a href="https://joebailey.xyz">Joe Bailey</a> | <a href="Documentation/.vuepress/dist">Documentation</a></p>
+	</footer>
 	<script>
 		document.getElementById("year").innerHTML = new Date().getFullYear();
 
@@ -100,7 +112,7 @@
 			if (document.getElementById(id).style.display === '') {
 				document.getElementById(id).style.display = 'block'
 			} else {
-				location.replace(id + ".html");
+				location.assign(id + ".html");
 			}
 		}
 	</script>
