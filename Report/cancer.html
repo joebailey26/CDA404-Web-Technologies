@@ -17,20 +17,10 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#212121">
-        <meta name="msapplication-TileColor" content="#212121">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#373737">
+        <meta name="msapplication-TileColor" content="#373737">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-        <meta name="theme-color" content="#212121">
-    
-        <script src="https://www.google.com/recaptcha/api.js?render=6LfVGZkUAAAAABHMr7qloXf9Gy5D6myaaPMtDSSB"></script>
-        <script>
-            grecaptcha.ready(function () {
-                grecaptcha.execute('6LfVGZkUAAAAABHMr7qloXf9Gy5D6myaaPMtDSSB', { action: 'contact' }).then(function (token) {
-                    var recaptchaResponse = document.getElementById('recaptchaResponse');
-                    recaptchaResponse.value = token;
-                });
-            });
-        </script>  
+        <meta name="theme-color" content="#373737">
     </head>
 <body id="article">
     <header>
@@ -74,8 +64,6 @@
     <footer>
         <p>&copy; <span id="year">2018</span> | Website by <a href="https://joebailey.xyz">Joe Bailey</a> | <a href="Documentation/.vuepress/dist">Documentation</a></p>
     </footer>
-    <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-    </script>
+    <script async src="assets/js/main.js"></script>
 </body>
 </html>
