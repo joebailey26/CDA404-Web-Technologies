@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:500');
+
+@font-face {
+    font-display: swap;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+	src: 
+		url(../webfonts/fa-solid-900.eot) format("embedded-opentype"), 
+		url(../webfonts/fa-solid-900.woff2) format("woff2"), 
+		url(../webfonts/fa-solid-900.woff) format("woff"), 
+		url(../webfonts/fa-solid-900.ttf) format("truetype"), 
+		url(../webfonts/fa-solid-900.svg) format("svg")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v42/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2')
+}
+
+.nav-icon {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+	font-style: normal;
+}
+
+.nav-icon:before {
+	content: "\f0c9";
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: 400;
+	font-size: 24px;
+	font-style: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga'
+}

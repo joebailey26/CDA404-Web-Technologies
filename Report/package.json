@@ -1,0 +1,12 @@
+{
+  "name": "report",
+  "version": "1.0.0",
+  "description": "Web Technologies Report",
+  "main": "index.js",
+  "author": "Joe Bailey",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "ejs": "2.6.1",
+    "express": "4.16.3"
+  }
+}
