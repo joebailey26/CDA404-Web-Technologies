@@ -62,6 +62,7 @@ a {
 
 #four-o-four h1 {
   text-align: center;
+  display: block;
   margin: 25px 0;
 }
 #four-o-four p {
@@ -69,6 +70,11 @@ a {
 }
 #four-o-four .button-one {
   text-align: center;
+}
+@media (max-width: 980px) {
+  #four-o-four p {
+    margin-bottom: 50px;
+  }
 }
 
 #index #main-content {
@@ -86,12 +92,21 @@ a {
   text-align: center;
   width: 100%;
 }
+@media (max-width: 980px) {
+  #index #main-content {
+    max-width: calc(100% - 36px);
+  }
+  #index p {
+    margin-bottom: 50px;
+  }
+}
 
 #news #nine-eleven, #news #mkultra, #news #cancer, #news #lincoln-and-kennedy {
   display: none;
 }
 #news h2 {
   margin-bottom: 25px;
+  text-decoration: underline;
 }
 #news p {
   margin-bottom: 25px;
@@ -99,7 +114,19 @@ a {
 #news .read-more {
   margin-bottom: 50px;
   font-size: 22px;
-  display: block;
+  display: inline-block;
+}
+@media (max-width: 980px) {
+  #news h2 {
+    margin-bottom: 20px;
+  }
+  #news p {
+    margin-bottom: 10px;
+  }
+  #news .read-more {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
 }
 
 #article h1 {
@@ -143,20 +170,42 @@ a {
   margin-right: 0px;
   float: right;
 }
+@media (max-width: 980px) {
+  #article h1 {
+    margin-bottom: 20px;
+  }
+  #article p {
+    margin-bottom: 16px;
+  }
+  #article img {
+    margin: 0;
+    width: 100% !important;
+    float: none !important;
+  }
+  #article .author, #article .date {
+    font-size: 14px;
+  }
+  #article li {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
 
 h1 {
   font-size: 30px;
   display: inline-block;
+  font-weight: 500;
 }
 
 h2 {
   font-size: 30px;
   display: inline-block;
+  font-weight: 500;
 }
 
 p {
   font-size: 22px;
-  text-align: justify;
+  font-weight: 500;
 }
 
 body {
@@ -172,6 +221,7 @@ header {
   height: 56px;
   width: 100%;
   background-color: #616161;
+  position: fixed;
 }
 
 nav {
@@ -195,7 +245,12 @@ app-drawer {
 
 #title {
   font-size: 20px;
+  width: 75%;
   vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
 }
 
 #main-content {
@@ -234,6 +289,34 @@ footer p {
 .button-one a:active {
   background-color: #32cb00;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.237602), 0px 0px 8px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 980px) {
+  #main-content {
+    max-width: calc(100% - 36px);
+    margin: 24px auto;
+    min-height: calc(100vh - 165px);
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  .button-one a {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

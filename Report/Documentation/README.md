@@ -98,7 +98,7 @@ After making my very simple wireframes I decided I wanted to mimic the Android A
 ## Production of site
 
 Normally I would use PHP for all my pages so that I don't have to copy and paste similar code in the head and in the footer. I can just use:
-`<?php include()>`
+`<?php include 'file.html';?>`
 However, due to this report being handed in via a ZIP file and me wanting to learn more about Firebase (which does not support PHP), I decided to use Node.js which is supposed to be a competitor. I wanted to create a Node.js script for emailing responses made from the form and for displaying the pages on the site. After spending a day trying to get it to play nice with Firebase I decided to give up and revert back to plain HTML, CSS, and JavaScript. If the website ever needed to go live it can use PHP which is readily available on every hosting package out there. Node.js, however, is not and requires a VPS.
 
 I developed the website desktop first rather than like my designs which I created mobile first. The reason for this is that I find it easier to see what I'm doing on a bigger screen and only have to make minor CSS changes for mobile versions of sites.

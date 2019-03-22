@@ -10,4 +10,9 @@
     .button-one {
         text-align: center
     }
+    @media (max-width: 980px) {
+        p {
+            margin-bottom: 50px;
+        }
+    }
 }
