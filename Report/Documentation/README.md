@@ -2,9 +2,7 @@
 
 ## Introduction
 
-## How to Run
-
-`node app.js`
+This is a report on the production of a website for assessment 2 in CDA 404 Web Technologies at Southampton Solent University.
 
 ## Background
 
@@ -12,7 +10,7 @@ A lot of people, particularly teenagers are interested in Conspiracy Theories. H
 YouTube delivers it's content in the forms of a video which is unsuitable to those who are deaf, or even people that just like to consume their content by reading.
 However, Wikipedia then goes into too much depth. There is too large a chunk of information to read.
 
-Conspiracy? News aims to fill the gap in the market by providing concise, accurate information that users can read in a lunch break. The platform will also offer users the ability to converse through the form of comments on individual posts. This way it is a deemed as a personal experience for users who will then be more likely to return to the site.
+Conspiracy? News aims to fill the gap in the market by providing concise, accurate information that users can read in a lunch break. This way it is a deemed as a personal experience for users who will then be more likely to return to the site.
 
 ## Client Requirements
 
@@ -45,37 +43,97 @@ Conspiracy? News aims to fill the gap in the market by providing concise, accura
 
 ## Wire Frames
 
-![Mobile Wireframe](/mobile-wireframe.jpg)
+![Mobile Wireframe](https://web-tech-report.firebaseapp.com/assets/images/mobile-wireframe.jpg)
 
-![Desktop Wireframe](/desktop-wireframe.jpg)
+![Desktop Wireframe](https://web-tech-report.firebaseapp.com/assets/images/desktop-wireframe.jpg)
 
 As the website is primarly aimed at teenagers the website will take a mobile first approach. Most teenagers consume content on their phone, therefore the website needs to work well and look good on the phone. The website will use elements of Material Design to mimic the look of a native application (something that may come later in the Software Development Lifecycle).
 
 The Homepage will be a landing page to introduce new users to the site. There will then be a News page and Contact Page. Each individual News Article will have it's own page.
 
-## Colour Choices
+## Color Choices
 
+As I was mimicking the Android App design style I used the [Material Design Color Tool](https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=616161&secondary.color=76FF03).
 
+![Colors](https://web-tech-report.firebaseapp.com/assets/images/Color-1.jpg)
+
+![Colors](https://web-tech-report.firebaseapp.com/assets/images/Color-2.jpg)
+
+This tool also takes into account accessibility which was helpful when creating my mockups because I could ensure that the website could be accessed by as many people as possible. This is discussed further in the Accessibility section of this report.
+
+![Accesibility-Colors](https://web-tech-report.firebaseapp.com/assets/images/Color-3.jpg)
 
 ## Initial Designs
 
+I took a mobile first approach to my designs. I used Figma to create them which went very well. I then asked my friends and family about the designs and they found no fault with them.
+
+### Mobile Designs
+
+![Mobile](https://web-tech-report.firebaseapp.com/assets/images/0001.jpg)
+
+![Mobile](https://web-tech-report.firebaseapp.com/assets/images/0002.jpg)
+
+![Mobile](https://web-tech-report.firebaseapp.com/assets/images/0003.jpg)
+
+![Mobile](https://web-tech-report.firebaseapp.com/assets/images/0004.jpg)
+
+![Mobile](https://web-tech-report.firebaseapp.com/assets/images/0005.jpg)
+
+### Desktop Designs
+
+![Desktop](https://web-tech-report.firebaseapp.com/assets/images/0006.jpg)
+
+![Desktop](https://web-tech-report.firebaseapp.com/assets/images/0007.jpg)
+
+![Desktop](https://web-tech-report.firebaseapp.com/assets/images/0008.jpg)
+
+![Desktop](https://web-tech-report.firebaseapp.com/assets/images/0009.jpg)
+
+![Desktop](https://web-tech-report.firebaseapp.com/assets/images/0010.jpg)
+
 ### Key changes from Wire Frames
+
+After making my very simple wireframes I decided I wanted to mimic the Android App UI. The initial designs include a lot more content than the wireframes as I find it easier to visualize with that style of design rather than wire frames.
 
 ## Production of site
 
+Normally I would use PHP for all my pages so that I don't have to copy and paste similar code in the head and in the footer. I can just use:
+`<?php include()>`
+However, due to this report being handed in via a ZIP file and me wanting to learn more about Firebase (which does not support PHP), I decided to use Node.js which is supposed to be a competitor. I wanted to create a Node.js script for emailing responses made from the form and for displaying the pages on the site. After spending a day trying to get it to play nice with Firebase I decided to give up and revert back to plain HTML, CSS, and JavaScript. If the website ever needed to go live it can use PHP which is readily available on every hosting package out there. Node.js, however, is not and requires a VPS.
+
+I developed the website desktop first rather than like my designs which I created mobile first. The reason for this is that I find it easier to see what I'm doing on a bigger screen and only have to make minor CSS changes for mobile versions of sites.
+
+I used Sass Partials in order to seperate out my CSS so I knew what I was changing. This really helped my development of the site as it kept CSS concise. I installed the CLI fo Sass too so didn't have to worry about compiling the code manually.
+
+I created the HTML first, then addded styling, and finally added JavaScript to bring the website together. This can be seen by my regular GIT commits.
+
+I regularly commited the code using GIT so that I could go back if I made any mistakes. This proved useful when testing out Node.js as I decided in the end that I did not want to use it.
+
+As a further project I made the docs into a static website using VuePress.
+
 ### Key changes from Initial Designs
 
+Whilst creating the site I changed the page background to #373737 rather than #212121 because I hadn't realised that this was incorrect in my Figma designs. #373737 was the correct Dark Primary Color as outlined in the Color Choices section of this report.
+
 ## Accessibility
+
+As well as making sure that the colors used provided enough contrast I also made sure that the site passed all 46 of Lighthouse's Accessibility Checks. Because the website is fairly simple no changes were needed and it is accessible already as the site follows the same visual structure as the DOM and it is mostly made up of text.
 
 ## GDPR
 
 The only data obtained via the website is through the contact form. As part of the contact form users have to explicitly agree to their data being possessed in order for their enquiry to be responded to.
+
+A comprehensive privacy policy has been created which can be accessed in the footer of any page.
+
+The site is secured using SSL which is provided by Firebase hosting. This encrypts the data sent to and from the website meaning that any information that users enter into the site is safe.
 
 ## Distance Selling
 
 This site does not sell any products or services. It merely distributes information for users to read. Therefore, it does not need to confrom to the [Online Distance and Selling Act](https://www.gov.uk/online-and-distance-selling-for-businesses) set out by the UK Government.
 
 ## Lighthouse Tests
+
+I ran Lighthouse tests which can be accesssed via Chrome Dev Tools on my website to see if I could do anything better. There wasn't much I could do in terms of speeding up the site as it is hosted with Firebase, however it did remind me to add alt tags to my images.
 
 ## Evaluation
 
