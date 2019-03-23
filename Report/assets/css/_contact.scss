@@ -3,15 +3,21 @@
         width: 600px;
         margin: auto;
     }
-    label {
+    label, #counter {
         color: rgba(255, 255, 255, 0.5);
         font-size: 18px;
     }
+    #counter {
+        margin-bottom: 25px;
+        text-align: right;
+    }
     input {
         height: 42px;
+        margin-bottom: 25px;
     } 
     textarea {
         line-height: 32px;
+        margin-bottom: 10px;
     }
     input, textarea {
         width: 100%;
@@ -26,7 +32,6 @@
         resize: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         outline: none;
-        margin-bottom: 25px;
         vertical-align: middle;
     }
     input:focus, textarea:focus {
@@ -46,7 +51,7 @@
         form {
             width: 100%;
         }
-        label {
+        label, #counter {
             font-size: 14px;
         }
         input {

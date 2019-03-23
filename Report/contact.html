@@ -25,20 +25,20 @@
 <body id="contact">
     <header>
         <nav>
-            <a title="navigation" id="navbar-toggler" href="javascript:void(0);" onclick="myFunction()">
+            <a title="navigation" id="navbar-toggler" href="javascript:void(0);" onclick="appdrawer()">
 				<i class="nav-icon"></i>
             </a>
-            <div class="app-drawer">
+            <div class="app-drawer closed">
 					<a href="index.html">
-						<i class="material-icons" id="active">home</i>
+						<i class="material-icons">home</i>
 						<p>Home</p>
 					</a>
 					<a href="news.html">
 						<i class="material-icons">library_books</i>
 						<p>News</p>
 					</a>
-					<a href="contact.html" id="active">
-						<i class="material-icons">chat</i>
+					<a href="contact.html" >
+						<i class="material-icons" id="active">chat</i>
 						<p>Contact</p>
 					</a>
 				</div>
@@ -62,7 +62,8 @@
 			<input id="subject" name="subject" required>
 
 			<label for="subject">Message</label>
-			<textarea id="subject" name="subject" rows="4" required></textarea>
+			<textarea id="subject" name="subject" rows="4" required max-length="120"></textarea>
+			<div id="counter">0/120</div>
 
 			<label for="privacyPolicy">
 				<input type="checkbox" id="privacyPolicy" name="privacy" value="privacy" required> I consent to having this website store my submitted information so they can respond to my inquiry.
@@ -77,5 +78,16 @@
         <p>&copy; <span id="year">2018</span> | Website by <a href="https://joebailey.xyz">Joe Bailey</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="Documentation/.vuepress/dist">Documentation</a></p>
     </footer>
 	<script async src="assets/js/main.js"></script>
+	<script>
+		var textarea = document.querySelector("textarea");
+		textarea.addEventListener("input", function(){
+			var maxlength = this.getAttribute("max-length");
+			var currentLength = this.value.length;
+			if( currentLength >= maxlength ){
+				window.alert("You have reached the maximum number of characters.");
+			}
+			document.getElementById('counter').innerHTML = currentLength + "/120";
+		});
+	</script>
 </body>
 </html>

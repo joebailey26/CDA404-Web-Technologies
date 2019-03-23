@@ -196,15 +196,21 @@ a {
   width: 600px;
   margin: auto;
 }
-#contact label {
+#contact label, #contact #counter {
   color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
 }
+#contact #counter {
+  margin-bottom: 25px;
+  text-align: right;
+}
 #contact input {
   height: 42px;
+  margin-bottom: 25px;
 }
 #contact textarea {
   line-height: 32px;
+  margin-bottom: 10px;
 }
 #contact input, #contact textarea {
   width: 100%;
@@ -219,7 +225,6 @@ a {
   resize: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   outline: none;
-  margin-bottom: 25px;
   vertical-align: middle;
 }
 #contact input:focus, #contact textarea:focus {
@@ -239,7 +244,7 @@ a {
   #contact form {
     width: 100%;
   }
-  #contact label {
+  #contact label, #contact #counter {
     font-size: 14px;
   }
   #contact input {
