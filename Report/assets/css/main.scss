@@ -46,12 +46,10 @@ header {
 	background-color: $primary_color;
 	position: fixed;
 	top: 0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
 }
 nav {
 	padding: 16px 0;
-}
-app-drawer {
-	display: none;
 }
 #active {
 	color: $secondary_color;
@@ -82,7 +80,7 @@ footer {
 }
 footer p {
 	font-size: 18px;
-	text-align: center;
+	text-align: center!important;
 	margin-bottom: 0px!important;
 }
 .logo {
@@ -115,12 +113,41 @@ button:active, .button a:active {
 .button-two:active {
 	background-color: rgba(255, 255, 255, 0.9)
 }
+.app-drawer.closed {
+	left: -304px;
+}
+.app-drawer {
+	position: absolute;
+	display: block;
+	width: 304px;
+	height: 100vh;
+	top: 56px;
+	background-color: $primary_color;
+	left: 0;
+	transition: 1s
+}
+.app-drawer a {
+	width: 100%;
+    display: inline-block;
+    height: 48px;
+}
+.app-drawer p {
+	display: inline-block;
+	margin: 0!important;
+	text-align: left!important;
+	font-size: 18px!important;
+	position: absolute;
+    line-height: 48px;
+}
+.app-drawer i {
+	margin: 12px 20px;
+}
 
 @media (max-width: 980px) {
 	#main-content {
 		max-width: calc(100% - 36px);
 		margin: 80px auto 24px auto;
-		min-height: calc(100vh - 150px);
+		min-height: calc(100vh - 170px);
 	}
 	h1 {
 		font-size: 20px;
@@ -136,5 +163,13 @@ button:active, .button a:active {
 	}
 	.button-one a {
 		font-size: 14px;
+	}
+	#close {
+		position: absolute;
+		width: calc(100% - 304px);
+		height: 100vh;
+		z-index: 2;
+		right: 0;
+		top: 56px;
 	}
 }

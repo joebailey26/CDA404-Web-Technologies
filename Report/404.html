@@ -28,27 +28,28 @@
           <a title="navigation" id="navbar-toggler" href="javascript:void(0);" onclick="myFunction()">
       <i class="nav-icon"></i>
           </a>
-          <app-drawer>
+          <div class="app-drawer closed">
               <a href="index.html">
-                  <i class="material-icons" id="active">home</i>
-                  Home
+                  <i class="material-icons">home</i>
+                  <p>Home</p>
               </a>
               <a href="news.html">
                   <i class="material-icons">library_books</i>
-                  News
+                  <p>News</p>
               </a>
               <a href="contact.html">
                   <i class="material-icons">chat</i>
-                  Contact
+                  <p>Contact</p>
               </a>
-          </app-drawer>
+          </div>
+          <a id="close" href="javascript:void(0);" onclick="appclose()"></a>
           <a id="title">Conspiracy?</a>
         </nav>
     </header>
     <div id="main-content">
       <img class="logo" width="300px" height="261px" src="assets/images/logo.svg">
         <h1>This is not the Conspiracy you're looking for.</h1>
-        <p class="button-one"><a href="index.html" >Return home</a></p>
+        <p class="button button-one"><a href="index.html" >Return home</a></p>
     </div>
     <footer>
       <p>&copy; <span id="year">2018</span> | Website by <a href="https://joebailey.xyz">Joe Bailey</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="Documentation/.vuepress/dist">Documentation</a></p>

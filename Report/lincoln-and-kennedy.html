@@ -28,20 +28,21 @@
             <a title="navigation" id="navbar-toggler" href="javascript:void(0);" onclick="myFunction()">
 				<i class="nav-icon"></i>
             </a>
-            <app-drawer>
-                <a href="index.html">
-                    <i class="material-icons" id="active">home</i>
-                    Home
-                </a>
-                <a href="news.html">
-                    <i class="material-icons">library_books</i>
-                    News
-                </a>
-                <a href="contact.html">
-                    <i class="material-icons">chat</i>
-                    Contact
-                </a>
-            </app-drawer>
+            <div class="app-drawer closed">
+                    <a href="index.html">
+                        <i class="material-icons">home</i>
+                        <p>Home</p>
+                    </a>
+                    <a href="news.html">
+                        <i class="material-icons">library_books</i>
+                        <p>News</p>
+                    </a>
+                    <a href="contact.html">
+                        <i class="material-icons">chat</i>
+                        <p>Contact</p>
+                    </a>
+                </div>
+                <a id="close" href="javascript:void(0);" onclick="appclose()"></a>
 			<a id="title">Lincoln and Kennedy Coincidences - Conspiracy?</a>
         </nav>
     </header>

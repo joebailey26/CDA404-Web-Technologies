@@ -39,7 +39,8 @@ Conspiracy? News aims to fill the gap in the market by providing concise, accura
 4. Feedback is then received on any mockups which are then redrawn taking into account the feedback. I asked my friends and family what they thought and they didn't think anything needed changing about my mockups.
 5. Development of the site then begins.
 6. Once development has been completed a series of tests are performed on the application to ensure that it works as required. Some of these tests can now be automated using tools such as Gulp and Grunt however they were outside the scope of this project. I used Lighthouse which is built in to Chrome.
-7. The application is then made live.
+7. The website is then tested on Chrome, Firefox, Edge, and Safari to make sure that all features worked as expected.
+8. The application is then made live.
 
 ## Wire Frames
 
@@ -109,11 +110,13 @@ I created the HTML first, then addded styling, and finally added JavaScript to b
 
 I regularly commited the code using GIT so that I could go back if I made any mistakes. This proved useful when testing out Node.js as I decided in the end that I did not want to use it.
 
+I had the intention of offering Form Validation using JavaScript, however, upon checking [Can I Use](https://caniuse.com/#feat=form-validation) it is clear that all up-to-date browsers support the HTML5 feature.
+
 As a further project I made the docs into a static website using VuePress.
 
 ### Key changes from Initial Designs
 
-Whilst creating the site I changed the page background to #373737 rather than #212121 because I hadn't realised that this was incorrect in my Figma designs. #373737 was the correct Dark Primary Color as outlined in the Color Choices section of this report.
+Whilst creating the site I changed the page background to #373737 rather than #212121 because I hadn't realised that this was incorrect in my Figma designs. #373737 was the correct Dark Primary Color as outlined in the Color Choices section of this report. Some margins were changed as it is easier to comprehend objects when they are live in the browser.
 
 ## Accessibility
 
@@ -135,6 +138,14 @@ This site does not sell any products or services. It merely distributes informat
 
 I ran Lighthouse tests which can be accesssed via Chrome Dev Tools on my website to see if I could do anything better. There wasn't much I could do in terms of speeding up the site as it is hosted with Firebase, however it did remind me to add alt tags to my images.
 
+## Cross-browser Testing
+
+When I tested the website in Firefox I found that invalid form entries had a red border. This clashed with the green border already in place. I then changed this using CSS.
+
+I tested the website using Edge but no changes were needed.
+
+I tested the website using Safari by using a Virtual Machine. No changes were noticed.
+
 ## Evaluation
 
 Overall I have experimented with the technologies I wanted to and have met the clients requirements. I have created an 8 page website using HTML, Sass, JavaScript and Node.js. This project has been a learning experience as outlined below.
@@ -151,3 +162,4 @@ Overall I have experimented with the technologies I wanted to and have met the c
 8. I learned how to use VuePress to host my documentation on Firebase. VuePress can run on Firebase as it creates static files, however it isn't ideal running in a subdirectory as the URL is fairly ugly.
 9. If you want to use split your html up into components, like a reusable header and footer, PHP is a lot easier, as the infrastructure is already there. The internet is a very old place, which makes it robust. New technologies are therefore hard to use, and unsupported on a lot of systems. An example would be IPv6. Furthermore, setting up an email to be sent on a form response is easy using PHP. Node.js requires a lot more groundwork for such a simple task.
 10. Before this project I had been using Adobe Dreamweaver almost exclusively for coding. I'd been using it in the developer mode, so without the visual interface. It was great because I could push my websites live and to my testing server, and could use GIT. Using Visual Studio Code I've come to understand that it can recognize a lot more different types of code than Dreamweaver can, however the interface feels clunky, unrefined, and many of it's features are only enabled by extensions and not out-of-the-box.
+11. I think people get a bit carried away with JavaScript and use it for a lot of unnecessary stuff that can be easily done in pure HTML and CSS. I looked into custom HTML elements and templates as part of this project and both don't really have any functionality or use in the real world. I wanted to create a HTML Element for an app drawer, but again limited documentation on it because it's a new technology meant I couldn't. This has been the case since I first started in Web Design. The CSS property `display: sticky` was still in it's infancy and had no support. 2 years later when I tried to use it it worked like a dream. Part of web development is knowing when to stick to proven technologies and when to adopt new ones. HTML templates and custom elements just don't provide any new features. I ended up implementing an app drawer with plain JavaScript adding a class depending on whether it was visible or not. Very simple.

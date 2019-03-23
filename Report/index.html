@@ -25,23 +25,24 @@
 <body id="index">
     <header>
         <nav>
-            <a title="navigation" id="navbar-toggler" href="javascript:void(0);" onclick="myFunction()">
+            <a title="navigation" id="navbar-toggler" href="javascript:void(0);" onclick="appdrawer()">
 				<i class="nav-icon"></i>
             </a>
-            <app-drawer>
+            <div class="app-drawer closed">
                 <a href="index.html">
                     <i class="material-icons" id="active">home</i>
-                    Home
+                    <p>Home</p>
                 </a>
                 <a href="news.html">
                     <i class="material-icons">library_books</i>
-                    News
+                    <p>News</p>
                 </a>
                 <a href="contact.html">
                     <i class="material-icons">chat</i>
-                    Contact
+                    <p>Contact</p>
                 </a>
-            </app-drawer>
+            </div>
+            <a id="close" href="javascript:void(0);" onclick="appclose()"></a>
 			<a id="title">Conspiracy?</a>
         </nav>
     </header>
