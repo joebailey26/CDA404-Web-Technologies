@@ -1,0 +1,16 @@
+#privacy {
+  h1, h2 {
+    margin-bottom: 25px;
+  }
+  p {
+    margin-bottom: 22px;
+  }
+  @media (max-width: 980px) {
+    h1, h2 {
+        margin-bottom: 20px;
+    }
+    p {
+        margin-bottom: 16px;
+    }
+  }
+}

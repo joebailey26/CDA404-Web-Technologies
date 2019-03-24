@@ -42,11 +42,11 @@
 						<p>Contact</p>
 					</a>
 				</div>
-				<a id="close" href="javascript:void(0);" onclick="appclose()"></a>
+				<a title="close-navigation" id="close" href="javascript:void(0);" onclick="appclose()"></a>
 			<a id="title">Contact - Conspiracy?</a>
         </nav>
     </header>
-    <div id="main-content">
+    <main>
 		<form method="post" name="myemailform" action="/form.php">
 
 			<label for="fname">First Name</label>
@@ -61,8 +61,8 @@
 			<label for="subject">Subject</label>
 			<input id="subject" name="subject" required>
 
-			<label for="subject">Message</label>
-			<textarea id="subject" name="subject" rows="4" required max-length="120"></textarea>
+			<label for="message">Message</label>
+			<textarea id="message" name="message" rows="4" required max-length="120"></textarea>
 			<div id="counter">0/120</div>
 
 			<label for="privacyPolicy">
@@ -73,7 +73,7 @@
 				Submit
 			</button>
 		</form>
-    </div>
+    </main>
     <footer>
         <p>&copy; <span id="year">2018</span> | Website by <a href="https://joebailey.xyz">Joe Bailey</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="Documentation/.vuepress/dist">Documentation</a></p>
     </footer>

@@ -1,5 +1,5 @@
 #index {
-    #main-content {
+    main {
         max-width: 438px;
     }
     h1 {
@@ -16,7 +16,7 @@
         width: 100%;
     }
     @media (max-width: 980px) {
-        #main-content {
+        main {
             max-width: calc(100% - 36px);
         }
         p {

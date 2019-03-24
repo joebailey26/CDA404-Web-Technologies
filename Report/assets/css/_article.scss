@@ -12,13 +12,6 @@
         font-size: 18px;
         color: white;
     }
-    li {
-        font-size: 22px;
-        margin-bottom: 11px;
-    }
-    ul {
-        margin-left: 22px;
-    }
     @mixin set-button($float: null) {
         @if ($float == right) or ($float == left) {
           float: $float; 
@@ -61,10 +54,6 @@
         }
         .author, .date {
             font-size: 14px;
-        }
-        li {
-            font-size: 16px;
-            margin-bottom: 8px;
         }
     }
 }
