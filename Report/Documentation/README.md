@@ -6,6 +6,8 @@ This is a report on the production of a website for Assessment 2 in CDA 404 Web 
 
 The website can be accessed live [here](https://web-tech-report.firebaseapp.com/).
 
+The GitHub repository for this website can be accessed [here](https://github.com/joebailey26/CDA404-Web-Technologies/tree/master/Report).
+
 ## Background
 
 A lot of people, particularly teenagers are interested in Conspiracy Theories. However, they can only source information on either YouTube or Wikipedia.
