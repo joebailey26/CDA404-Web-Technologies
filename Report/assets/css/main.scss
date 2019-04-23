@@ -176,12 +176,4 @@ button:active, .button a:active {
 	.button-one a {
 		font-size: 14px;
 	}
-	#close {
-		position: absolute;
-		width: calc(100% - 304px);
-		height: 100vh;
-		z-index: 2;
-		right: 0;
-		top: 56px;
-	}
 }

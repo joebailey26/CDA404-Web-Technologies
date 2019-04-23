@@ -1,6 +1,34 @@
 #article {
+    textarea {
+		line-height: 32px;
+		margin-bottom: 10px;
+		width: 100%;
+		color: white;
+		background: transparent;
+		border: none;
+		font-size: 22px;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		line-height: normal;
+		resize: none;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		outline: none;
+		vertical-align: middle;
+	}
+	textarea:focus {
+		border-bottom: 1px solid $secondary_color;
+		caret-color: $secondary_color;
+	}
     h1 {
         margin-bottom: 25px;
+    }
+    h2 {
+        margin: 25px 0;
+    }
+    #messages p {
+        color: #9e9e9e;
+        margin-bottom: 50px;
     }
     p {
         margin-bottom: 22px;
@@ -55,5 +83,12 @@
         .author, .date {
             font-size: 14px;
         }
+        textarea {
+			line-height: 24px;
+			font-size: 16px;
+		}
+		button {
+			font-size: 14px;
+		}
     }
 }

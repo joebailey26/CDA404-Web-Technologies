@@ -57,6 +57,20 @@
     <footer>
         <p>&copy; <span id="year">2018</span> | Website by <a href="https://joebailey.xyz">Joe Bailey</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="Documentation/.vuepress/dist">Documentation</a></p>
     </footer>
-    <script async src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function displayNextImage() {
+            x = (x === 1) ? 0 : x + 1;
+            console.log(x)
+            document.getElementsByClassName("logo")[0].src = images[x];
+        };
+
+        setInterval(displayNextImage, 5000);
+
+        var images = [], x = -1;
+        images[0] = "assets/images/logo.svg";
+        images[1] = "assets/images/logo2.svg";
+        
+    </script>
 </body>
 </html>

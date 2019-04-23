@@ -21,6 +21,41 @@
         <meta name="msapplication-TileColor" content="#373737">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
         <meta name="theme-color" content="#616161">
+
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyD8XP3STx4BcZO6hgiM6iw_-I4pmmONkwQ",
+                authDomain: "web-tech-report.firebaseapp.com",
+                databaseURL: "https://web-tech-report.firebaseio.com",
+                projectId: "web-tech-report",
+                storageBucket: "web-tech-report.appspot.com",
+                messagingSenderId: "535616200418"
+            };
+            firebase.initializeApp(config);
+
+            var database = firebase.database();
+            var ref =   firebase.database().ref('nine_messages/');
+
+            function sendMessage() {  
+                
+                var comment = document.getElementById('comment').value;
+                ref.push({
+                            nine_message: comment
+                });
+            }
+
+            ref.on('value', function(snapshot) {
+                let nine_messages = ''
+                snapshot.forEach(function(msg) {
+                    nine_messages = nine_messages +  '<p>' + msg.val().nine_message  + '</p>'
+                })
+                
+                document.getElementById('messages').innerHTML = nine_messages;
+                
+            });
+        </script>
     </head>
 <body id="article">
     <header>
@@ -93,6 +128,18 @@
         <p>Fingers have been pointed at everyone from the government of Saudi Arabia to the Pakistani Intelligence Agency (ICI) to the Israeli Secret Service (Mossad).</p>
 
         <p>However, the 9/11 Commission Report - the final inquiry report on the incident - states: &ldquo;We have seen no evidence that any foreign government &ndash; or foreign government official &ndash; supplied any funding.&rdquo;</p>
+    
+        <div class="comments">
+            <h2>Comments</h2>
+            
+            <div class="well" id="messages"></div>
+                
+            <textarea id="comment"></textarea>
+                
+            <button type="button" onClick="sendMessage()" class="btn">Send Message</button>
+            
+        </div><!-- /.comments-->
+    
     </main>
     <footer>
         <p>&copy; <span id="year">2018</span> | Website by <a href="https://joebailey.xyz">Joe Bailey</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="Documentation/.vuepress/dist">Documentation</a></p>

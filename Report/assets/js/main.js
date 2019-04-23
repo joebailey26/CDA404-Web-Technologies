@@ -17,4 +17,4 @@ function appclose(){
         app.classList.remove('open');
         app.classList.add('closed')
     }
-}
+};

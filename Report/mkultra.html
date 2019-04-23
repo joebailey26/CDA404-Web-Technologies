@@ -21,6 +21,41 @@
         <meta name="msapplication-TileColor" content="#373737">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
         <meta name="theme-color" content="#616161">
+
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyD8XP3STx4BcZO6hgiM6iw_-I4pmmONkwQ",
+                authDomain: "web-tech-report.firebaseapp.com",
+                databaseURL: "https://web-tech-report.firebaseio.com",
+                projectId: "web-tech-report",
+                storageBucket: "web-tech-report.appspot.com",
+                messagingSenderId: "535616200418"
+            };
+            firebase.initializeApp(config);
+
+            var database = firebase.database();
+            var ref =   firebase.database().ref('mk_messages/');
+
+            function sendMessage() {  
+                
+                var comment = document.getElementById('comment').value;
+                ref.push({
+                    mk_message: comment
+                });
+            }
+
+            ref.on('value', function(snapshot) {
+                let mk_messages = ''
+                snapshot.forEach(function(msg) {
+                    mk_messages = mk_messages +  '<p>' + msg.val().mk_message  + '</p>'
+                })
+                
+                document.getElementById('messages').innerHTML = mk_messages;
+                
+            });
+        </script>
     </head>
 <body id="article">
     <header>
@@ -87,6 +122,18 @@
         <p>So, there you have it. The CIA did use mind-altering drugs on unsuspecting civilian populations and those too weak to fight back and then tried to cover it up. While most conspiracy theories are far-fetched and debunkable with two minutes of thought, some of them are entirely true.</p>
         
         <p>MKUltra was a conspiracy between the government and many institutions to drug people without their knowledge and use anything learned from it for espionage purposes. Modern research into psychedelic drugs is increasingly benign, but we must remember that a great deal of what we know about them was discovered for the sake of making them weapons. A sobering reminder of what science can do without guidance.</p>
+    
+        <div class="comments">
+            <h2>Comments</h2>
+            
+            <div class="well" id="messages"></div>
+                
+            <textarea id="comment"></textarea>
+                
+            <button type="button" onClick="sendMessage()" class="btn">Send Message</button>
+            
+        </div><!-- /.comments-->
+    
     </main>
     <footer>
         <p>&copy; <span id="year">2018</span> | Website by <a href="https://joebailey.xyz">Joe Bailey</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="Documentation/.vuepress/dist">Documentation</a></p>

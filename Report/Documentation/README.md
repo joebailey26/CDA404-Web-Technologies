@@ -10,9 +10,9 @@ The GitHub repository for this website can be accessed [here](https://github.com
 
 ## Background
 
-A lot of people, particularly teenagers are interested in Conspiracy Theories. However, they can only source information on either YouTube or Wikipedia.
+A lot of people, particularly teenagers, are interested in Conspiracy Theories. However, they can only source information on either YouTube or Wikipedia.
 YouTube delivers it's content in the form of videos which are unsuitable for those who are deaf, or even people that just like to consume their content by reading.
-However, Wikipedia then goes into too much depth. There is too large a chunk of information to read.
+However, Wikipedia then goes into too much depth. There is too large a chunk of information to read. The website also features comments for people to discuss current and past conspiracies with others from around the world.
 
 Conspiracy? aims to fill the gap in the market by providing concise, accurate information that users can read in a lunch break.
 
@@ -122,6 +122,10 @@ I added an App Drawer which is shown and hidden on a button press using JavaScri
 I added a counter to my form to indicate how many characters a user could type into the body of their enquiry.
 
 As a further project I made the documentation into a static website using VuePress and Firebase.
+
+Each News Article features comments that are stored in seperate databases using FireBase so that users can interact with one another to discuss the conspiracy.
+
+The homepage features an animation of the logo opening and closing it's eye. This is done using JavaScript.
 
 ### Key changes from Initial Designs
 
